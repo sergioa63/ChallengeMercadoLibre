@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Challenge</string>
+    <string name="all_permission_are_required">Todos los permisos son requeridos</string>
+    <string name="name_button_Snackbar">ACEPTAR</string>
+    <string name="categorias">Categorias</string>
+    <string name="buscar">Buscar</string>
+    <string name="title">title</string>
+    <string name="price">price</string>
+    <string name="detalle">Detalle</string>
+    <string name="precio">$ %1$,d </string>
+    <string name="buscar_prodcutos">Buscar Prodcutos</string>
+</resources>

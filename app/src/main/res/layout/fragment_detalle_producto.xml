@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <import type="android.view.View"></import>
+        <variable
+            name="viewModel"
+            type="com.example.sergio.challenge.presentation.list.ListProductosViewModel" />
+    </data>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_field"
+    tools:context=".presentation.list.ui.detail.DetalleProductoFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/title_descrip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/proxima_nova_semibold"
+        android:text= "@{viewModel.product_select.name}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/descript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:justificationMode="inter_word"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="14sp"
+        android:text= "@{viewModel.product_select.descrip}"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_descrip" />
+
+        <ImageView
+            android:id="@+id/ImageDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/descript"></ImageView>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/proxima_nova_regular"
+        android:text="@string/price"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"></TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</FrameLayout>
+</layout>

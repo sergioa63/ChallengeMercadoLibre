@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        style="@styles/TextView.semiBold"
+        android:id="@+id/txtVAutoCategoria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/halfMargin"
+        android:textSize="14sp"
+        android:layout_marginStart="@dimen/halfOddMargin"
+        android:text="Categoria" />
+
+    <TextView
+        style="@styles/TextView.regular"
+        android:id="@+id/txtVAutoCodeCat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginBottom="@dimen/spaceMargin"
+        android:layout_marginStart="22dp"
+        android:text="codigo" />
+</LinearLayout>

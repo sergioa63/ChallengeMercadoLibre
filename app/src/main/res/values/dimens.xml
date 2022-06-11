@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--LINE VIEW WIDTH/HEIGHT-->
+
+    <dimen name="lineViewThick">1dp</dimen>
+
+    <!--MARGINS-->
+
+    <dimen name="lowSpaceMargin">2dp</dimen>
+    <dimen name="marginOneDp">1dp</dimen>
+    <dimen name="spaceMargin">4dp</dimen>
+    <dimen name="margin_cinco">5dp</dimen>
+    <dimen name="highSpaceMargin">6dp</dimen>
+    <dimen name="halfMargin">8dp</dimen>
+    <dimen name="margin_diez">10dp</dimen>
+    <dimen name="halfOddMargin">12dp</dimen>
+    <dimen name="margin_left">14dp</dimen>
+    <dimen name="margin_right">14dp</dimen>
+    <dimen name="marginTop">15dp</dimen>
+    <dimen name="baseMargin">16dp</dimen>
+    <dimen name="margin_item">17dp</dimen>
+    <dimen name="fieldMargin">18.5dp</dimen>
+    <dimen name="reportPointMargin">22dp</dimen>
+    <dimen name="smallIconMargin">24dp</dimen>
+    <dimen name="statusBarMargin">25dp</dimen>
+    <dimen name="doubleMargin">32dp</dimen>
+    <dimen name="marginEnd">35dp</dimen>
+    <dimen name="fieldWithBasePadding">40dp</dimen>
+    <dimen name="tripleMargin">48dp</dimen>
+    <dimen name="triplePlusHalfMargin">56dp</dimen>
+    <dimen name="fourthMargin">64dp</dimen>
+
+    <!--TEXT SIZES-->
+
+    <dimen name="textSizeDos">2sp</dimen>
+    <dimen name="textSizeOcho">8sp</dimen>
+    <dimen name="textSizeTen">10sp</dimen>
+    <dimen name="textSizeTxt">11sp</dimen>
+    <dimen name="textSizeNormal">12sp</dimen>
+    <dimen name="textTitle">13sp</dimen>
+    <dimen name="baseTextSize">14sp</dimen>
+    <dimen name="text_dialog_contrasena">15sp</dimen>
+    <dimen name="textRegular">14sp</dimen>
+    <dimen name="textSizeSearch">14sp</dimen>
+    <dimen name="interestTextSize">16sp</dimen>
+    <dimen name="textBold">16sp</dimen>
+    <dimen name="resultTextSize">18sp</dimen>
+    <dimen name="editableFieldTextSize">18sp</dimen>
+    <dimen name="toolbarTitle">18sp</dimen>
+    <dimen name="bigSubTitleTextSize">20sp</dimen>
+    <dimen name="titleDialog">21sp</dimen>
+    <dimen name="bigTitleTextSize">24sp</dimen>
+    <dimen name="giantTitle">30sp</dimen>
+
+
+    <!--ELEVATION-->
+
+    <dimen name="baseElevation">4dp</dimen>
+
+    <!--BASE CORNER-->
+
+    <dimen name="baseCorner">4dp</dimen>
+
+    <!--IMAGES-->
+
+    <dimen name="baseSwipeDeleteSize">72dp</dimen>
+
+    <!--CLIENT DETAIL-->
+
+    <dimen name="baseDetailOption">36dp</dimen>
+
+    <!--SMALL ICONS-->
+
+    <dimen name="baseTinyIcon">18dp</dimen>
+    <dimen name="baseSmallIconContainer">36dp</dimen>
+    <dimen name="baseSmallIcon">24dp</dimen>
+
+    <!--MAIN MENU TOP ICONS-->
+
+    <dimen name="baseBigICons">64dp</dimen>
+    <dimen name="baseContainerButtons">48dp</dimen>
+
+    <!--SHADOW-->
+
+    <dimen name="shadowSize">6dp</dimen>
+
+    <!--FLOATING ACTION BUTTONS-->
+
+    <dimen name="extraSmallFABSize">24dp</dimen>
+    <dimen name="tinyFABSize">34dp</dimen>
+    <dimen name="baseFABSize">56dp</dimen>
+
+    <!--CUSTOM CHIP-->
+
+    <dimen name="filterChipStroke">1dp</dimen>
+    <dimen name="filterChipElevation">4dp</dimen>
+    <dimen name="filterChipRadius">4dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="appbar_padding">16dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="appbar_padding_top">8dp</dimen>
+
+
+</resources>

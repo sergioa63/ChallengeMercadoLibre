@@ -1,0 +1,117 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-parcelize'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.sergio.challenge"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+        javaCompileOptions.annotationProcessorOptions.arguments['dagger.hilt.disableModulesHaveInstallInCheck'] = 'true'
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+        enabledForTests = true
+    }
+    tasks.withType(JavaCompile) {
+        configure(options) {
+            options.compilerArgs << "-Adagger.hilt.disableModulesHaveInstallInCheck=true"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    tasks.withType(JavaCompile) {
+        configure(options) {
+            options.compilerArgs << "-Adagger.hilt.disableModulesHaveInstallInCheck=true"
+        }
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
+    implementation("androidx.navigation:navigation-fragment:2.3.5")
+    implementation("androidx.navigation:navigation-ui:2.3.5")
+    implementation "androidx.navigation:navigation-fragment-ktx:2.3.5"
+    implementation "androidx.navigation:navigation-ui-ktx:2.3.5"// Feature module Support
+    // Feature module Support
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:2.3.5"
+    // Testing Navigation
+    androidTestImplementation "androidx.navigation:navigation-testing:2.3.5"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+
+    implementation 'com.google.dagger:hilt-android:2.41'
+    kapt 'com.google.dagger:hilt-compiler:2.41'
+
+    // For instrumentation tests
+    androidTestImplementation  'com.google.dagger:hilt-android-testing:2.41'
+    kaptTest 'com.google.dagger:hilt-android-compiler:2.28-alpha'
+    kaptAndroidTest 'com.google.dagger:hilt-compiler:2.41'
+
+    // For local unit tests
+    testImplementation 'com.google.dagger:hilt-android-testing:2.28-alpha'
+    kaptTest 'com.google.dagger:hilt-compiler:2.41'
+    testAnnotationProcessor 'com.google.dagger:hilt-android-compiler:2.28-alpha'
+    androidTestAnnotationProcessor 'com.google.dagger:hilt-android-compiler:2.28-alpha'
+
+
+    implementation "androidx.room:room-ktx:2.3.0"
+    kapt "androidx.room:room-compiler:2.4.1"
+    implementation "androidx.room:room-runtime:2.4.1"
+    annotationProcessor "androidx.room:room-compiler:2.4.1"
+    kaptTest "androidx.room:room-compiler:2.4.1"
+    androidTestImplementation "androidx.room:room-testing:2.3.0"
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:4.9.0'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.13.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.0'
+    // Dependencies for Android unit tests
+    androidTestImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0"
+    // AndroidX Test - JVM testing
+    testImplementation "androidx.test:core-ktx:1.4.1-alpha04"
+    testImplementation "androidx.test.ext:junit-ktx:1.1.3"
+    testImplementation 'androidx.test:rules:1.2.0'
+    // Once https://issuetracker.google.com/127986458 is fixed this can be testImplementation
+    debugImplementation "androidx.fragment:fragment-testing:1.4.1"
+    implementation "androidx.test:core:1.4.1-alpha04"
+    testImplementation 'androidx.test:core:1.4.1-alpha04'
+    androidTestImplementation 'androidx.test:core:1.4.1-alpha04'
+    androidTestImplementation 'androidx.test:runner:1.4.0'
+    implementation 'androidx.media:media:1.4.3'
+    implementation 'androidx.exifinterface:exifinterface:1.3.3'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+}
+hilt {
+    enableAggregatingTask = true
+}

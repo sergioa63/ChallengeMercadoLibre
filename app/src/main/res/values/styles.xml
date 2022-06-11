@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextView" />
+    <style name="TextView.semiBold">
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/proxima_nova_semibold</item>
+        <item name="android:textSize">@dimen/textRegular</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
+    <style name="TextView.EditTextRegular">
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/proxima_nova_regular</item>
+        <item name="android:textSize">@dimen/textSizeNormal</item>
+        <item name="android:textColor">@color/baseText</item>
+        <item name="android:textColorHint">@color/placeholderText</item>
+        <item name="android:background">@drawable/layout_edit_text</item>
+    </style>
+</resources>

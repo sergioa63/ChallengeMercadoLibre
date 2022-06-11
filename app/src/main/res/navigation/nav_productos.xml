@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_productos"
+    app:startDestination="@id/listProductosFragment">
+
+    <fragment
+        android:id="@+id/listProductosFragment"
+        android:name="com.example.sergio.challenge.presentation.list.ui.main.ListProductosFragment"
+        android:label="ListProductosFragment" >
+        <action
+            android:id="@+id/action_listProductosFragment_to_detalleProductoFragment"
+            app:destination="@id/detalleProductoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detalleProductoFragment"
+        android:name="com.example.sergio.challenge.presentation.list.ui.detail.DetalleProductoFragment"
+        android:label="DetalleProductoFragment" >
+        <argument
+            android:name="codeProduct"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="urlImage"
+            app:argType="string"
+            android:defaultValue=""/>
+        <action
+            android:id="@+id/action_detalleProductoFragment_to_listProductosFragment"
+            app:destination="@id/listProductosFragment" />
+    </fragment>
+</navigation>

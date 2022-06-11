@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="view"
+            type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.example.sergio.challenge.presentation.list.ListProductosViewModel" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:background="@color/mercado_libre"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:id="@+id/progress_Bar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:background="@color/colorPrimary"
+        android:max="100"
+        android:minWidth="200dp"
+        android:minHeight="50dp"
+        android:progress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/categorias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progress_Bar"></TextView>
+
+    <AutoCompleteTextView
+        android:id="@+id/autoCompleteTextView"
+        style="@style/TextView.EditTextRegular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:focusedByDefault="false"
+        android:completionThreshold="1"
+        android:hint="@string/buscar"
+        android:padding="@dimen/halfMargin"
+        android:textSize="16dp"
+        android:background="@drawable/bg_field"
+        app:drawableEndCompat="@drawable/ic_magnifying_glass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+
+    <fragment
+        android:id="@+id/nav_products_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/autoCompleteTextView"
+        app:navGraph="@navigation/nav_productos" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
