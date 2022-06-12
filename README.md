@@ -1,5 +1,4 @@
 # ChallengeMercadoLibre
-# Challenge Mercado Libre
 
 ## Objetivo:
 
