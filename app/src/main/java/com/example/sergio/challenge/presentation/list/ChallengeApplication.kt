@@ -6,12 +6,15 @@ import android.content.Context
 import android.os.Bundle
 import androidx.multidex.MultiDex
 import androidx.multidex.MultiDexApplication
+import com.google.firebase.FirebaseApp
+import com.google.firebase.analytics.FirebaseAnalytics
 import dagger.hilt.android.HiltAndroidApp
 import java.util.*
 
 @HiltAndroidApp
 class ChallengeApplication: MultiDexApplication(), Application.ActivityLifecycleCallbacks {
 
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
     companion object {
         lateinit var context: Context
         lateinit var localeCOL : Locale
@@ -26,6 +29,8 @@ class ChallengeApplication: MultiDexApplication(), Application.ActivityLifecycle
         super.onCreate()
         context = applicationContext
         localeCOL = Locale("es", "CO")
+        FirebaseApp.initializeApp(this)
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
     }
     override fun onActivityCreated(activity: Activity, savedInstanceState: Bundle?) {
 
