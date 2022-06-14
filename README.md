@@ -21,6 +21,7 @@ La app debería contar con tres pantallas:
 * Navigation
 * room
 * retrofit
+* Errores criticos o inesperados monitoriados por firebase
 
 Aplicación para búsqueda de productos, búsqueda de listado de productos por categoría y búsqueda en lista de productos. Apertura de detalle del producto.
 
