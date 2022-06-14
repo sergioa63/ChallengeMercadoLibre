@@ -93,6 +93,8 @@ class ListProductosActivity : AppCompatActivity(), ActivityCompat.OnRequestPermi
                     if(list.isNotEmpty()) {
                         val adapter = AutocompleteAdapter(this@ListProductosActivity, list)
                         binding.autoCompleteTextView.setAdapter(adapter)
+                        viewModel.consultarByCatalogo(list[0].codigo)
+                        binding.autoCompleteTextView.setText(list[0].name)
                         hideProgressBar()
                     }
                 }
